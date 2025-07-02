@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Century Schoolbook Mono";
+    src: url("https://cath.land/Century-Schoolbook-Monospace-BT.ttf")
+}
+
+@font-face {
+    font-family: "Electra Cursive";
+    src: url("https://cath.land/ElectraLTStd-Cursive.otf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Century Schoolbook Mono";
+    line-height: 1.3rem;
+}
+
+
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+p {
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+section {
+    margin-bottom: 80px;
+    width: 60%;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.columns {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card h1 {
+    display: inline;
+    background-color: black;
+    padding: .25rem .75rem;
+}
+
+#one-thesis {
+    background-image: url("powerlines2.jpg");
+
+}
+
+#two-intervention {
+    background-image: url("warehouse.jpg");
+
+}
+
+
+#three-whatittakes {
+    background-image: url("warehouse2.jpg");
+
+}
+
+
+.filter {
+
+}
+
+.portrait {
+    width: 350px;
+}
+
+@media (max-width: 500px) {
+    section {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    section.card {
+        height: 40vh;
+        background-size: 103% auto;
+    }
+
+    section.card h1 {
+        padding: .25rem .75rem;
+    }
+}
