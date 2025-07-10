@@ -8,6 +8,16 @@
     src: url("https://cath.land/ElectraLTStd-Cursive.otf")
 }
 
+@font-face {
+    font-family: "Authentic Sans Condensed 60";
+    src: url("https://cath.land/authentic-sans-condensed-60.otf")
+}
+
+@font-face {
+    font-family: "Authentic Sans 130";
+    src: url("https://cath.land/authentic-sans-130.otf")
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +36,6 @@ body {
 
 
 .container {
-    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -39,32 +48,65 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin-top: 80px;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
     font-weight: 400;
-    text-align: center;
+    max-width: 70rem;
+    font-family: "Authentic Sans Condensed 60", Helvetica, Arial;
 }
 
 h3 {
     font-size: 1.25rem;
-    line-height: 1.25rem;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    font-weight: 400;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    max-width: 70rem;
+}
+
+em {
+    font-style: italic;
+    font-size: inherit;
+}
+
+strong {
+    font-family: "Authentic Sans 130", Helvetica, Arial, sans-serif;
+/*    font-size: 105%;*/
+    font-size: inherit;
 }
 
 p {
     margin: 0 0 16px 0;
     font-size: 1rem;
     line-height: 1.3rem;
+    max-width: 50rem;
+}
+
+ul {
+    margin-left: 1rem;
+    list-style: none;
+    list-style-position: outside;
+    max-width: 70rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    text-indent: -5rem;
+    padding-left: 5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+
+ul li:before {
+    content: "→";
+    padding-right: 4rem;
 }
 
 section {
-    margin-bottom: 80px;
-    width: 60%;
+    width: 95vw;
     margin: auto;
+    margin-bottom: 15rem;
 }
 
 img {
@@ -75,6 +117,44 @@ img {
     height: auto;
     margin-bottom: 40px;
 }
+
+h1.number {
+    font-family: "Authentic Sans Condensed 60", Helvetica, Arial, sans-serif;
+    font-size: 5rem;
+    line-height: 2.05rem;
+}
+
+.tooltip {
+    position: relative;
+    font-size: inherit;
+    display: inline;
+    cursor: pointer;
+    border-bottom: .15rem dotted white;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    display: table;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: grey;
+    padding: .25rem .5rem; 
+    box-sizing: border-box;
+    min-width: max-content;   
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .card {
     width: 100%;
@@ -87,12 +167,56 @@ img {
     background-position: center;
 }
 
-.columns {
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    flex-direction: row;
+.log-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr 8fr;
+  gap: 1.25rem;
 }
+
+.wide-col {
+    grid-column: 2 / 5;
+}
+
+.col-one {
+    grid-column: 2;
+}
+
+.col
+
+.two-col-left {
+    grid-column: 2 / 4;
+}
+
+.two-col-right {
+    grid-column: 4 / 5;
+}
+
+.grid-table {
+    grid-column: 2 / 5; /* Position in your main grid */
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 8fr; /* Match your log scale! */
+    gap: 1rem;
+}
+
+.grid-table thead,
+.grid-table tbody {
+    display: contents; /* Makes tr direct grid children */
+}
+
+.grid-table tr {
+    display: contents; /* Makes td/th direct grid children */
+}
+
+.grid-table td {
+    padding-bottom: 1rem;
+}
+
+/*.grid-table th,
+.grid-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}*/
+
 
 .card h1 {
     display: inline;
