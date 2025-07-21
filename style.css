@@ -61,6 +61,16 @@ h3 {
     line-height: 1.75rem;
     margin-bottom: 1rem;
     max-width: 70rem;
+    font-family: "Authentic Sans 130", Helvetica, Arial;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    max-width: 70rem;
 }
 
 em {
@@ -82,7 +92,6 @@ p {
 }
 
 ul {
-    margin-left: 1rem;
     list-style: none;
     list-style-position: outside;
     max-width: 70rem;
@@ -132,29 +141,23 @@ h1.number {
     border-bottom: .15rem dotted white;
 }
 
-.tooltip::after {
-    content: attr(data-tooltip);
-    display: table;
+.tooltip .tooltip-text {
     position: absolute;
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
     background-color: grey;
-    padding: .25rem .5rem; 
-    box-sizing: border-box;
-    min-width: max-content;   
+    padding: .25rem .5rem;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
-
 }
 
-.tooltip:hover::after {
+.tooltip:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
 }
-
 
 .card {
     width: 100%;
@@ -181,7 +184,9 @@ h1.number {
     grid-column: 2;
 }
 
-.col
+.col-left-small {
+    grid-column: 2 / 3;
+}
 
 .two-col-left {
     grid-column: 2 / 4;
@@ -190,6 +195,19 @@ h1.number {
 .two-col-right {
     grid-column: 4 / 5;
 }
+
+.right-col {
+    grid-column: 4 / 6;
+}
+
+.wide-right-col {
+    grid-column: 3 / 6;
+}
+
+.left-col {
+    grid-column: 2 / 5;
+}
+
 
 .grid-table {
     grid-column: 2 / 5; /* Position in your main grid */
